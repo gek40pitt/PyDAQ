@@ -41,7 +41,6 @@ class Lockin:
     def find_device() :
         #This function will find all devices connected to the PC through USB or
         #RS-232 ports. Then it will save the device as a variable.
-        # rm = pyvisa.ResourceManager()
         return print('Device options are:' + str(rm.list_resources()) + \
                 '. Set the device name to its connected name (ex. ASRL5::INSTR)')
         
@@ -62,7 +61,7 @@ class Lockin:
         #This will attemp to send and receive information from lock in
         ID_lockin = lockin.query('*IDN?')
         
-        return print(str(ID_lockin) + ' ' + 'found: Lockin connection was succesful.' \
+        return print(str(ID_lockin) + ' ' + 'found: Lockin connection was successful.' \
                      ' Proceed with initialization.')
             
     def sinout(amp):
